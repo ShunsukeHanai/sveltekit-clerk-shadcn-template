@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "mysql",
-  "id": "d3b1480b-f99d-48c0-a146-8f50d8b1b2b3",
+  "id": "2b992d91-869e-4809-bf2c-2841d13312f8",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "user": {
@@ -34,7 +34,7 @@
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false,
-          "default": "'2025-02-10 14:11:49.927'"
+          "default": "'2025-02-10 14:41:39.054'"
         },
         "updated_at": {
           "name": "updated_at",
@@ -42,7 +42,7 @@
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false,
-          "default": "'2025-02-10 14:11:49.927'"
+          "default": "'2025-02-10 14:41:39.054'"
         }
       },
       "indexes": {},
