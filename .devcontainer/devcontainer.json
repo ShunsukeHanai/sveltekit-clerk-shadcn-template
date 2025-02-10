@@ -1,0 +1,16 @@
+{
+  "name": "svelte-app",
+  "dockerComposeFile": ["./compose.yaml"],
+  "workspaceFolder": "/app",
+  "service": "app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "svelte.svelte-vscode",
+        "biomejs.biome",
+        "cweijan.vscode-mysql-client2"
+      ]
+    }
+  }
+}
