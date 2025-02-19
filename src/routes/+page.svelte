@@ -1,5 +1,10 @@
-<script lang="ts">
-    import { Button } from "$lib/components/ui/button/index.js";
+<script>
+    import { SignedIn, UserButton } from "svelte-clerk";
 </script>
 
-<Button>Click me</Button>
+<div>
+    <h1>Index Route</h1>
+    <SignedIn>
+        <UserButton />
+    </SignedIn>
+</div>

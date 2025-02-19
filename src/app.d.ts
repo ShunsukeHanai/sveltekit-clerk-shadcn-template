@@ -1,5 +1,6 @@
-// See https://svelte.dev/docs/kit/types#app.d.ts
-// for information about these interfaces
+/// <reference types="svelte-clerk/env" />
+
+export type Roles = "admin" | "staff";
 declare global {
 	namespace App {
 		// interface Error {}
@@ -8,6 +9,9 @@ declare global {
 		// interface PageState {}
 		// interface Platform {}
 	}
+	interface CustomJwtSessionClaims {
+		metadata: {
+			role?: Roles;
+		};
+	}
 }
-
-export {};

@@ -7,6 +7,7 @@
 	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
 	import { useSidebar } from "$lib/components/ui/sidebar/index.js";
 	import Button from "./ui/button/button.svelte";
+	import { SignedIn, UserButton } from "svelte-clerk";
 	const sidebar = useSidebar();
 
 	// Menu items.
@@ -61,7 +62,11 @@
 			</Sidebar.GroupContent>
 		</Sidebar.Group>
 	</Sidebar.Content>
-	<Sidebar.Footer />
+	<Sidebar.Footer>
+		<SignedIn>
+			<UserButton />
+		</SignedIn>
+	</Sidebar.Footer>
 </Sidebar.Root>
 
 {#if sidebar.isMobile}
