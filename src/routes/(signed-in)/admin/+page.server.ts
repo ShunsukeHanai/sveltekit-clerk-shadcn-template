@@ -6,6 +6,7 @@ export const load = async ({ locals }) => {
 	const userId = approveAdmin(locals.auth);
 
 	const user = await clerkClient.users.getUser(userId);
+
 	return {
 		userId: user.firstName,
 	};
