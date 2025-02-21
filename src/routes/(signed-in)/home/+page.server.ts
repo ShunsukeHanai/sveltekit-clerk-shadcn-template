@@ -1,12 +1,12 @@
 import { approve } from "$lib/server/auth.js";
-import { clerkClient } from "svelte-clerk/server";
+import { superValidate } from "sveltekit-superforms";
+import { formSchema } from "./schema";
+import { zod } from "sveltekit-superforms/adapters";
 
 export const load = async ({ locals }) => {
-	const userId = approve(locals.auth);
-
-	const user = await clerkClient.users.getUser(userId);
+	approve(locals.auth);
 
 	return {
-		userId: user.firstName,
+		form: await superValidate(zod(formSchema)),
 	};
 };
