@@ -19,6 +19,7 @@
 		"db:studio": "drizzle-kit studio"
 	},
 	"devDependencies": {
+		"@clerk/testing": "^1.4.23",
 		"@playwright/test": "^1.49.1",
 		"@sveltejs/adapter-cloudflare": "^5.0.1",
 		"@sveltejs/kit": "^2.16.0",
@@ -26,6 +27,7 @@
 		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/svelte": "^5.2.7",
 		"@testing-library/user-event": "^14.6.1",
+		"@types/node": "^22.13.4",
 		"autoprefixer": "^10.4.20",
 		"bits-ui": "^1.0.0-next.91",
 		"clsx": "^2.1.1",

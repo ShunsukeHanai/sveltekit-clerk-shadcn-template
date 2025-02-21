@@ -1,1 +1,1 @@
-this is admin page
+<p>admin</p>
