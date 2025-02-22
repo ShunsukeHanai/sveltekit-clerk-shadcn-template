@@ -4,11 +4,21 @@
     import { formSchema } from "./schema";
     import { superForm } from "sveltekit-superforms";
     import { zodClient } from "sveltekit-superforms/adapters";
+    import { toast } from "svelte-sonner";
 
     let { data } = $props();
 
     const form = superForm(data.form, {
         validators: zodClient(formSchema),
+        onError({ result }) {
+            toast.error("エラーが発生しました");
+            console.error(result);
+        },
+        onUpdated({ form }) {
+            if (form.valid) {
+                toast.success(form.message);
+            }
+        },
     });
 
     const { form: formData, enhance } = form;
